@@ -1,0 +1,12 @@
+package com.example.countries.model
+
+import io.reactivex.Single
+import retrofit2.http.GET
+
+/**
+ * Created by Rasa Cosmin on 05/07/2019.
+ */
+interface CountriesApi {
+    @GET("DevTides/countries/master/countriesV2.json")
+    fun getCountries(): Single<List<Country>>
+}
